@@ -1,12 +1,17 @@
 <?php
-    class Persona {
+    abstract class Persona {
         private $cedula;
         private $nombre1;
         private $nombre2;
         private $apellido1;
         private $apellido2;
 
-        public Persona{
+        public function __construct($cedula, $nombre1, $nombre2, $apellido1, $apellido2) {
+            $this->cedula = $cedula;
+            $this->nombre1 = $nombre1;
+            $this->nombre2 = $nombre2;
+            $this->apellido1 = $apellido1;
+            $this->apellido2 = $apellido2;
         }
 
         public function getCedula() {
